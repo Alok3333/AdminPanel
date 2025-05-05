@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Next.js
+.next/
+out/
+.swc/
+
+# Production
+build
+
+# System files
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+*.local
+
+# Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,80 @@
+.sidebar-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    overflow: hidden;
+    color: #374151;
+    /* Gray-700 */
+    z-index: 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar-item .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    z-index: 10;
+}
+
+.sidebar-item .text {
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    z-index: 10;
+}
+
+/* Animation background layer */
+.sidebar-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: 0;
+    transition: width 0.4s ease;
+}
+
+/* Hover fill animation */
+.sidebar-item:hover::before {
+    width: 100%;
+}
+
+/* Each item gets a unique hover color */
+.sidebar-item.dashboard::before {
+    background-color: #a4e2a6;
+    border-radius: 0px 50px 50px 0px;
+    /* Green */
+}
+
+.sidebar-item.accounts::before {
+    background-color: #e5c089;
+    border-radius: 0px 50px 50px 0px;
+    /* Orange */
+}
+
+.sidebar-item.tickets::before {
+    background-color: #94c2e7;
+    border-radius: 0px 50px 50px 0px;
+    /* Blue */
+}
+
+.sidebar-item.settings::before {
+    background-color: #da9ce5;
+    border-radius: 0px 50px 50px 0px;
+    /* Purple */
+}
+
+/* Ensure text & icons appear above the background */
+.sidebar-item:hover {
+    color: white;
+}
+
+.sidebar-item:hover .icon {
+    color: white;
+}
+
+.sidebar-item:hover .text {
+    color: white;
+}
