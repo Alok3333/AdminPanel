@@ -1,9 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
 }
+
+/* Root variables for colors */
+:root {
+  /* Primary Palette */
+  --primary-color: #3498db;
+  /* Blue */
+  --secondary-color: #2ecc71;
+  /* Green */
+  --accent-color: #e74c3c;
+  /* Red */
+  --tertiary-color: #f39c12;
+  /* Yellow */
+
+  /* Neutral Palette */
+  --light-gray: #ecf0f1;
+  /* Light Gray */
+  --gray: #bdc3c7;
+  /* Gray */
+  --dark-gray: #7f8c8d;
+  /* Dark Gray */
+  --black: #2c3e50;
+  /* Black */
+  --white: #ffffff;
+  /* White */
+
+  /* Backgrounds */
+  --background-color: #f0f0f0;
+  /* Light Background */
+  --background-dark: #34495e;
+  /* Dark Background */
+  --background-accent: #f4f4f4;
+  /* Accent Background */
+
+  /* Text Colors */
+  --text-color: #333;
+  /* Dark Text */
+  --text-light: #95a5a6;
+  /* Light Text */
+  --text-dark: #2c3e50;
+  /* Dark Text */
+  --text-muted: #7f8c8d;
+  /* Muted Text */
+
+  /* Border Colors */
+  --border-light: #bdc3c7;
+  /* Light Border */
+  --border-dark: #7f8c8d;
+  /* Dark Border */
+  --border-accent: #2980b9;
+  /* Accent Border */
+
+  /* Link Colors */
+  --link-color: #2980b9;
+  /* Link Blue */
+  --link-hover: #3498db;
+  /* Link Hover Blue */
+
+  /* Button Colors */
+  --button-primary: #3498db;
+  /* Primary Button */
+  --button-secondary: #2ecc71;
+  /* Secondary Button */
+  --button-danger: #e74c3c;
+  /* Danger Button */
+  --button-hover: #2980b9;
+  /* Button Hover */
+
+  /* Alert Colors */
+  --alert-success: #2ecc71;
+  /* Success Alert */
+  --alert-warning: #f39c12;
+  /* Warning Alert */
+  --alert-error: #e74c3c;
+  /* Error Alert */
+
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  /* Light Shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+  /* Medium Shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  /* Dark Shadow */
+
+  /* Hover and Focus Colors */
+  --hover-color: #2980b9;
+  /* Hover Color */
+  --focus-color: #3498db;
+  /* Focus Color */
+}
+
+
 
 @theme inline {
   --color-background: var(--background);

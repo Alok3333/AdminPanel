@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import Sidebar from "./components/sidebar";
+import SidebarContainer from "@/components/sidebar/SidebarContainer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,30 +20,22 @@ export const metadata = {
 // app/layout.js or wherever RootLayout is
 export default function RootLayout({ children }) {
   const logoSrc = "/assets/images/b.jpg"; // or dynamically from props/config
-  const avatarSrc = "/assets/images/images.jpeg";
-  
+  const brandName = "Selfeey";
+  const avatarSrc = "/assets/images/profile1.jpg";
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex h-screen overflow-hidden">
-          {/* Fixed Sidebar */}
-          <aside className="w-64 h-full shrink-0 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
-            <Sidebar
-              logoSrc={logoSrc}
-              avatarSrc={avatarSrc}
-              userName="John Doe"
-            />
-          </aside>
-
-          {/* Scrollable main content */}
-          <main className="flex-1 overflow-y-auto bg-blue-50 dark:bg-gray-800">
-            {children}
-          </main>
-        </div>
+        <SidebarContainer
+          logoSrc={logoSrc}
+          brandName={brandName}
+          avatarSrc={avatarSrc}
+        >
+          {children}
+        </SidebarContainer>
       </body>
     </html>
   );
 }
-
