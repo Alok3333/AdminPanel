@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar/navbar";
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 
 const logoSrc = "/assets/images/b.jpg"; // or dynamically from props/config
@@ -11,6 +12,7 @@ export default function MainLayout({ children }) {
       brandName={brandName}
       avatarSrc={avatarSrc}
     >
+      <Navbar/>
       {children}
     </SidebarContainer>
   );

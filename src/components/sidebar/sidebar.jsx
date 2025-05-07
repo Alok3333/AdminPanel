@@ -10,6 +10,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
 } from "@heroicons/react/24/outline";
+import Swal from "sweetalert2";
 
 import "./sidebar.css"; // <- Make sure this path is correct
 import { useRouter } from "next/navigation";
@@ -21,8 +22,28 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
 
   // Handle for logout
   const handleLogout = () => {
-    alert("logout");
-    router.push("/login");
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You will be logged out from your session.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, logout",
+      cancelButtonText: "Cancel",
+      allowOutsideClick: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Logged out!",
+          text: "You have been successfully logged out.",
+          icon: "success",
+          allowOutsideClick: false,
+        }).then(() => {
+          router.push("/login");
+        });
+      }
+    });
   };
 
   // Handle for dropdown
@@ -86,7 +107,7 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
         <div>
           <button
             onClick={() => toggleDropdown("eps")}
-            className="sidebar-item accounts justify-between w-full text-left"
+            className="sidebar-item accounts justify-between w-full text-left cursor-pointer"
             aria-label="Eps"
           >
             <div className="flex items-center">
@@ -101,12 +122,12 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
           </button>
           {openDropdown === "eps" && (
             <div className="ml-10 mt-1 flex flex-col text-sm gap-1">
-              <Link
-                href="/eps/list"
-                className="hover:no-underline text-gray-600 dark:text-gray-300 py-2 pl-2"
+              <button
+                onClick={() => router.push("/eps/list")}
+                className="text-left hover:no-underline text-gray-600 dark:text-gray-300 py-2 pl-2 cursor-pointer"
               >
-                <li>Organization</li>
-              </Link>
+                Organization
+              </button>
               {/* <Link
                 href="/eps/create"
                 className="hover:no-underline text-gray-600 dark:text-gray-300 py-2 pl-2"
@@ -121,7 +142,7 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
         <div>
           <button
             onClick={() => toggleDropdown("hrs")}
-            className="sidebar-item tickets justify-between w-full text-left"
+            className="sidebar-item tickets justify-between w-full text-left cursor-pointer"
             aria-label="Hrs"
           >
             <div className="flex items-center">
@@ -136,12 +157,12 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
           </button>
           {openDropdown === "hrs" && (
             <div className="ml-10 mt-1 flex flex-col text-sm gap-1">
-              <Link
-                href="/hrs/schedule"
-                className="hover: no-underline text-gray-600 dark:text-gray-300 py-2"
+              <button
+                onClick={() => router.push("/hris/schedule")}
+                className="text-left hover: no-underline text-gray-600 dark:text-gray-300 py-2 pl-2 cursor-pointer"
               >
-                <li>Organization</li>
-              </Link>
+                Organization
+              </button>
               {/* <Link
                 href="/hrs/reports"
                 className="hover: no-underline text-gray-600 dark:text-gray-300 py-2"
