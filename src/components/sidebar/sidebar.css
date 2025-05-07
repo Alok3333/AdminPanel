@@ -18,6 +18,10 @@
     z-index: 10;
 }
 
+.sidebar-item .icondropdown {
+    z-index: 10;
+}
+
 .sidebar-item .text {
     font-size: 1rem;
     letter-spacing: 0.3px;
@@ -71,7 +75,7 @@
     color: white;
 }
 
-.sidebar-item:hover .icon {
+.sidebar-item:hover .icon .icondropdown {
     color: white;
 }
 

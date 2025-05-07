@@ -94,9 +94,9 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
               <span className="text font-roboto font-light">Eps</span>
             </div>
             {openDropdown === "eps" ? (
-              <ChevronUpIcon className="w-4 h-4" />
+              <ChevronUpIcon className="w-4 h-4 icondropdown" />
             ) : (
-              <ChevronDownIcon className="w-4 h-4" />
+              <ChevronDownIcon className="w-4 h-4 icondropdown" />
             )}
           </button>
           {openDropdown === "eps" && (
@@ -129,9 +129,9 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
               <span className="text font-roboto font-light">Hrs</span>
             </div>
             {openDropdown === "hrs" ? (
-              <ChevronUpIcon className="w-4 h-4" />
+              <ChevronUpIcon className="w-4 h-4 icondropdown" />
             ) : (
-              <ChevronDownIcon className="w-4 h-4" />
+              <ChevronDownIcon className="w-4 h-4 icondropdown" />
             )}
           </button>
           {openDropdown === "hrs" && (

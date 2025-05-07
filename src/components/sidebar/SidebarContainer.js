@@ -20,7 +20,7 @@ export default function SidebarContainer({
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
         {sidebarOpen ? (
-          <XMarkIcon className="w-6 h-6 text-gray-900 dark:text-white" />
+          <XMarkIcon className="absolute left-50 w-6 h-6 text-gray-900 dark:text-white" />
         ) : (
           <Bars3Icon className="w-6 h-6 text-gray-900 dark:text-white" />
         )}
