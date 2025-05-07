@@ -91,7 +91,7 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
           >
             <div className="flex items-center">
               <UserIcon className="icon" />
-              <span className="text font-roboto font-light">Eps</span>
+              <span className="text font-roboto font-light">EPS</span>
             </div>
             {openDropdown === "eps" ? (
               <ChevronUpIcon className="w-4 h-4 icondropdown" />
@@ -103,16 +103,16 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
             <div className="ml-10 mt-1 flex flex-col text-sm gap-1">
               <Link
                 href="/eps/list"
-                className="hover:underline text-gray-600 dark:text-gray-300"
+                className="hover:no-underline text-gray-600 dark:text-gray-300 py-2 pl-2"
               >
-                Option1
+                <li>Organization</li>
               </Link>
-              <Link
+              {/* <Link
                 href="/eps/create"
-                className="hover:underline text-gray-600 dark:text-gray-300"
+                className="hover:no-underline text-gray-600 dark:text-gray-300 py-2 pl-2"
               >
-                Option2
-              </Link>
+                <li>Option2</li>
+              </Link> */}
             </div>
           )}
         </div>
@@ -126,7 +126,7 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
           >
             <div className="flex items-center">
               <TicketIcon className="icon" />
-              <span className="text font-roboto font-light">Hrs</span>
+              <span className="text font-roboto font-light">HRIS</span>
             </div>
             {openDropdown === "hrs" ? (
               <ChevronUpIcon className="w-4 h-4 icondropdown" />
@@ -138,16 +138,16 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
             <div className="ml-10 mt-1 flex flex-col text-sm gap-1">
               <Link
                 href="/hrs/schedule"
-                className="hover:underline text-gray-600 dark:text-gray-300"
+                className="hover: no-underline text-gray-600 dark:text-gray-300 py-2"
               >
-                Option1
+                <li>Organization</li>
               </Link>
-              <Link
+              {/* <Link
                 href="/hrs/reports"
-                className="hover:underline text-gray-600 dark:text-gray-300"
+                className="hover: no-underline text-gray-600 dark:text-gray-300 py-2"
               >
-                Option2
-              </Link>
+                <li>Option2</li>
+              </Link> */}
             </div>
           )}
         </div>

@@ -19,22 +19,12 @@ export const metadata = {
 
 // app/layout.js or wherever RootLayout is
 export default function RootLayout({ children }) {
-  const logoSrc = "/assets/images/b.jpg"; // or dynamically from props/config
-  const brandName = "Selfeey";
-  const avatarSrc = "/assets/images/profile1.jpg";
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarContainer
-          logoSrc={logoSrc}
-          brandName={brandName}
-          avatarSrc={avatarSrc}
-        >
-          {children}
-        </SidebarContainer>
+        {children}
       </body>
     </html>
   );
