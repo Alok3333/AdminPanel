@@ -50,7 +50,7 @@ export default function SidebarContainer({
       )}
 
       {/* Main content */}
-      <main className="flex-1 overflow-y-auto bg-blue-50 dark:bg-gray-800 md:ml-0">
+      <main className="flex-1 overflow-y-auto bg-blue-50 dark:bg-gray-800 md:ml-0 px-6">
         {children}
       </main>
     </div>

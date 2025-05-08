@@ -191,7 +191,7 @@ export default function EpsListPage() {
   const currentData = data.slice(startIndex, startIndex + rowsPerPage);
 
   const handleRowClick = (id) => {
-    router.push(`/organizations/${id}`);    
+    router.push(`/eps/list/organizations/${id}`);    
   };
 
   return (

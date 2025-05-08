@@ -9,16 +9,16 @@ export default function Navbar() {
   const dropdownRef = useRef(null);
 
   // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickOutside(event) {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setShowDropdown(false);
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, []);
 
   return (
     <header className="hidden md:block max-w-7xl mx-auto rounded-xl sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md w-full">
@@ -43,7 +43,8 @@ export default function Navbar() {
           {/* Right: User Profile */}
           <div
             className="relative flex items-center gap-2 cursor-pointer"
-            onClick={() => setShowDropdown(!showDropdown)}
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
             ref={dropdownRef}
           >
             <Image
@@ -54,11 +55,11 @@ export default function Navbar() {
               className="rounded-full object-cover"
             />
             <span className="text-sm font-medium text-gray-800 dark:text-white">
-              John Doe
+              Pawan Seen
             </span>
 
             {showDropdown && (
-              <div className="absolute right-0 top-0 mt-12 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-50 overflow-hidden">
+              <div className="absolute right-0 top-0 mt-9 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg z-50 overflow-hidden">
                 <div className="p-4 border-b border-gray-200 dark:border-gray-700">
                   <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">
                     User Profile
@@ -72,10 +73,10 @@ export default function Navbar() {
                       className="rounded-full object-cover mb-2"
                     />
                     <p className="text-sm font-medium text-gray-800 dark:text-white">
-                      John Doe
+                      Pawan Seen
                     </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
-                      john@example.com
+                      Pawansee@example.com
                     </p>
                   </div>
                 </div>
@@ -84,25 +85,25 @@ export default function Navbar() {
                   <nav className="flex flex-col gap-3 text-sm">
                     <Link
                       href="/profile"
-                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      className="text-gray-700 dark:text-gray-300 hover:bg-blue-100 p-2 rounded-lg dark:hover:text-blue-400"
                     >
                       My Profile
                     </Link>
                     <Link
                       href="/inbox"
-                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      className="text-gray-700 dark:text-gray-300 hover:bg-blue-100 p-2 rounded-lg dark:hover:text-blue-400"
                     >
                       My Inbox
                     </Link>
                     <Link
                       href="/settings"
-                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      className="text-gray-700 dark:text-gray-300 hover:bg-blue-100 p-2 rounded-lg dark:hover:text-blue-400"
                     >
                       Settings
                     </Link>
                     <Link
                       href="/support"
-                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      className="text-gray-700 dark:text-gray-300 hover:bg-blue-100 p-2 rounded-lg dark:hover:text-blue-400"
                     >
                       Support
                     </Link>
@@ -110,7 +111,7 @@ export default function Navbar() {
 
                   <div className="mt-4">
                     <button
-                      className="w-full text-sm text-white bg-red-500 hover:bg-red-600 transition px-4 py-2 rounded"
+                      className="w-full text-sm text-white bg-red-500 hover:bg-red-600 transition px-4 py-2 rounded cursor-pointer"
                       onClick={() => alert("Logout clicked")}
                     >
                       Logout

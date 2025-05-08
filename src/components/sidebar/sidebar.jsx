@@ -124,7 +124,7 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
             <div className="ml-10 mt-1 flex flex-col text-sm gap-1">
               <button
                 onClick={() => router.push("/eps/list")}
-                className="text-left hover:no-underline text-gray-600 dark:text-gray-300 py-2 pl-2 cursor-pointer"
+                className="text-left hover:no-underline hover:text-green-400 text-gray-600 dark:text-gray-300 py-2 pl-2 cursor-pointer"
               >
                 Organization
               </button>
@@ -159,7 +159,7 @@ const Sidebar = ({ logoSrc, brandName, avatarSrc, userName = "John Doe" }) => {
             <div className="ml-10 mt-1 flex flex-col text-sm gap-1">
               <button
                 onClick={() => router.push("/hris/schedule")}
-                className="text-left hover: no-underline text-gray-600 dark:text-gray-300 py-2 pl-2 cursor-pointer"
+                className="text-left hover: no-underline hover:text-green-400 text-gray-600 dark:text-gray-300 py-2 pl-2 cursor-pointer"
               >
                 Organization
               </button>

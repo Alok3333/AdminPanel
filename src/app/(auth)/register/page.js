@@ -61,31 +61,31 @@ export default function Register() {
         </form>
 
         {/* Divider */}
-        <div className="my-6 flex items-center">
+        {/* <div className="my-6 flex items-center">
           <hr className="flex-grow border-t" />
           <span className="mx-2 text-gray-500 text-sm">or continue with</span>
           <hr className="flex-grow border-t" />
-        </div>
+        </div> */}
 
         {/* Social Sign-Up */}
-        <div className="flex flex-col gap-3">
+        {/* <div className="flex flex-col gap-3">
           <button className="flex items-center justify-center gap-2 border border-gray-300 py-2 rounded hover:bg-gray-100 transition">
-            {/* <Image
+            <Image
               src="/assets/icons/google.svg"
               alt="Google"
               className="w-5 h-5"
-            /> */}
+            />
             Sign up with Google
           </button>
           <button className="flex items-center justify-center gap-2 border border-gray-300 py-2 rounded hover:bg-gray-100 transition">
-            {/* <Image
+            <Image
               src="/assets/icons/facebook.svg"
               alt="Facebook"
               className="w-5 h-5"
-            /> */}
+            />
             Sign up with Facebook
           </button>
-        </div>
+        </div> */}
 
         {/* Login Redirect */}
         <p className="mt-6 text-sm text-center">
